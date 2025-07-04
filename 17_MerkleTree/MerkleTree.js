@@ -28,11 +28,12 @@ console.log(root);
 // 2. 创建provider和wallet
 // 准备 alchemy API 可以参考https://github.com/AmazingAng/WTFSolidity/blob/main/Topics/Tools/TOOL04_Alchemy/readme.md
 const ALCHEMY_GOERLI_URL =
-  "https://eth-goerli.alchemyapi.io/v2/GlaeWuylnNM3uuOo-SAwJxuwTdqHaY5l";
+  "https://eth-sepolia.g.alchemy.com/v2/U57o5HcGeidRWNXl_MAVg";
+
 const provider = new ethers.JsonRpcProvider(ALCHEMY_GOERLI_URL);
 // 利用私钥和provider创建wallet对象
 const privateKey =
-  "0x227dbb8586117d55284e26620bc76534dfbd2394be34cf4a09cb775d593b6f2b";
+  "0xa87fcf572a39667cf60e46a078baa6fa62544fccbbacbcf025fcacb55336fa40";
 const wallet = new ethers.Wallet(privateKey, provider);
 
 // 3. 创建合约工厂

@@ -5,7 +5,7 @@ import { ethers } from "ethers";
 console.log("\n1. 连接 wss RPC");
 // 准备 alchemy API 可以参考https://github.com/AmazingAng/WTFSolidity/blob/main/Topics/Tools/TOOL04_Alchemy/readme.md
 const ALCHEMY_MAINNET_WSSURL =
-  "wss://eth-mainnet.g.alchemy.com/v2/oKmOQKbneVkxgHZfibs-iFhIlIAl6HDN";
+  "wss://eth-mainnet.g.alchemy.com/v2/U57o5HcGeidRWNXl_MAVg";
 const provider = new ethers.WebSocketProvider(ALCHEMY_MAINNET_WSSURL);
 let network = provider.getNetwork();
 // network.then(res => console.log(`[${(new Date).toLocaleTimeString()}] 连接到 chain ID ${res.chainId}`));

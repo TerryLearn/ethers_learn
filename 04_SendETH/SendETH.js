@@ -19,7 +19,7 @@ import { ethers } from "ethers";
 
 //1.创建Provider
 const achademe_URL =
-  "https://eth-mainnet.g.alchemy.com/v2/U57o5HcGeidRWNXl_MAVg";
+  "https://eth-sepolia.g.alchemy.com/v2/U57o5HcGeidRWNXl_MAVg";
 //连接以太坊主网
 const provider = new ethers.JsonRpcProvider(achademe_URL);
 
@@ -30,7 +30,7 @@ const mnemonic = wallet1.mnemonic; // 获取助记词
 
 // 利用私钥和provider创建wallet对象
 const privateKey =
-  "0x227dbb8586117d55284e26620bc76534dfbd2394be34cf4a09cb775d593b6f2b";
+  "0xa87fcf572a39667cf60e46a078baa6fa62544fccbbacbcf025fcacb55336fa40";
 const wallet2 = new ethers.Wallet(privateKey, provider);
 
 // 从助记词创建wallet对象

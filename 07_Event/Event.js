@@ -9,7 +9,7 @@ import { ethers } from "ethers";
 // 利用Alchemy的rpc节点连接以太坊网络
 // 准备 alchemy API 可以参考https://github.com/AmazingAng/WTFSolidity/blob/main/Topics/Tools/TOOL04_Alchemy/readme.md
 const ALCHEMY_GOERLI_URL =
-  "https://eth-goerli.alchemyapi.io/v2/GlaeWuylnNM3uuOo-SAwJxuwTdqHaY5l";
+  "https://eth-mainnet.g.alchemy.com/v2/U57o5HcGeidRWNXl_MAVg";
 const provider = new ethers.JsonRpcProvider(ALCHEMY_GOERLI_URL);
 
 // WETH ABI，只包含我们关心的Transfer事件

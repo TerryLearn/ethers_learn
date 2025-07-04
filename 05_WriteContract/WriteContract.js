@@ -9,12 +9,12 @@ import { ethers } from "ethers";
 // 利用Alchemy的rpc节点连接以太坊网络
 // 准备 alchemy API 可以参考https://github.com/AmazingAng/WTFSolidity/blob/main/Topics/Tools/TOOL04_Alchemy/readme.md
 const ALCHEMY_GOERLI_URL =
-  "https://eth-mainnet.g.alchemy.com/v2/U57o5HcGeidRWNXl_MAVg";
+  "https://eth-sepolia.g.alchemy.com/v2/U57o5HcGeidRWNXl_MAVg";
 const provider = new ethers.JsonRpcProvider(ALCHEMY_GOERLI_URL);
 
 // 利用私钥和provider创建wallet对象
 const privateKey =
-  "0x227dbb8586117d55284e26620bc76534dfbd2394be34cf4a09cb775d593b6f2b";
+  "0xa87fcf572a39667cf60e46a078baa6fa62544fccbbacbcf025fcacb55336fa40";
 const wallet = new ethers.Wallet(privateKey, provider);
 
 // WETH的ABI
@@ -25,7 +25,7 @@ const abiWETH = [
   "function withdraw(uint) public",
 ];
 // WETH合约地址（Goerli测试网）
-const addressWETH = "0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6";
+const addressWETH = "0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9";
 // WETH Contract
 
 // 声明可写合约
@@ -42,7 +42,6 @@ const main = async () => {
   console.log(`存款前WETH持仓: ${ethers.formatEther(balanceWETH)}\n`);
   //读取钱包内ETH余额
   const balanceETH = await provider.getBalance(wallet);
-
   // 如果钱包ETH足够
   if (ethers.formatEther(balanceETH) > 0.0015) {
     // 2. 调用deposit()函数，将0.001 ETH转为WETH
